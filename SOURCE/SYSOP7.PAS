@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B+,E+,F+,I+,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
  12/17/2021 - aesthetic changes
  03/09/2023 - Error messages now using Messages PROC

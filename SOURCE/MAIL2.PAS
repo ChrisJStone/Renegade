@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 ReadAllMessages prompt now using lRGLngStr, was commented out for some reason
 Added SysOp log for non global newscan

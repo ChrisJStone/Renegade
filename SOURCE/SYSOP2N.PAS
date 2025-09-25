@@ -17,7 +17,7 @@
   {$R-} { Range-Checking }
   {$Q-} { Overflow Checking }
 {$ENDIF}
-
+{$X+} { Extended Syntax }
 
 {     (                                         }
 {    )\ )                           (           }

@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 added a bunch of hangup checks, in an attempt to remove artifacts printed after hangup
 indented everything

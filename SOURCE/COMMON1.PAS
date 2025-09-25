@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 11/4/2021 - moved input procs to COMMON3
           - Won't ask for sysop pw if blank

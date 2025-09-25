@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 Lee Woodridge
  09/23/2021 - Removed all strings from lang file

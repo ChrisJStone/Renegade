@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
  10/20/2021 - Color config now uses byte color instead of caret codes
             - Aesthetic changes

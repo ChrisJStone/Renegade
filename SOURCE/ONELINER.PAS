@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 Lee Woodridge
  09/29/2021 - Moved ToLower func to common, likely useful elsewhere

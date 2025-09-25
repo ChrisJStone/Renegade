@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O-,V-}
+{$X+} { Extended Syntax }
 {
  10/21/2021 - Removed: Color change for input longer than 2
  10/31/2021 - Added commands:

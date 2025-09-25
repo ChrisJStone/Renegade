@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 Lee Woodridge
  09/21/2021 - Added  DirInfo: SearchRec; to UploadFile VARS, was breaking mass uploads

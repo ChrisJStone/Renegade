@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 LeeW
  09/21/2021 - Fixed move file operation so rg no longer creates dupe description on failure

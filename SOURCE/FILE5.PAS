@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 leew: searchrec var in uploadall probably needs uncommented -- test
 enter blank desc WAS = jibberish, no longer...

@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N+,O-,V-}
+{$X+} { Extended Syntax }
 (*
 Lee Woodridge
  10/04/2021 - Removed: RGSysCfgStr function
@@ -4865,7 +4866,7 @@ begin
         assign(f, gr.datapath+'MULTNODE.DAT');
         rewrite(f);
         if ioresult=0 then
-         begin                          
+         begin
           nr.user:=1;
           if (paramstr(4)>'') then nr.username:=paramstr(4);
           nr.citystate:='';

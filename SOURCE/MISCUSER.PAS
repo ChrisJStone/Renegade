@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+ { Extended Syntax }
 {
  00/00/2021 - SearchUser changed username string from astr to string[36]
  11/18/2021 - Moved finduser to logon.pas only place its used, doesn't seem like it'll be useful anywhere else

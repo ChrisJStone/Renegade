@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
  00/00/0000 - Added: Won't ask for forgot pw answer if question is blank
             - Added: Almost all strings are in lang except for a few i'm still working on

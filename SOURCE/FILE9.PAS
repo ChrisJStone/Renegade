@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 
 {
  02/24/2022 - rewrote/simplified setfileareanewscandate -- REMOVED

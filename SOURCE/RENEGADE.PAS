@@ -1,3 +1,5 @@
+{$DEFINE DEBUG}
+{$DEFINE OVERLAY}
 {$IFDEF FPC}
   {$MODE TP}
 {$ENDIF}
@@ -68,10 +70,13 @@ USES
   NewUsers,
   Offline,
 { OneLiner, }
+{$IFDEF OVERLAY}
   Overlay,
+{$ENDIF}
   TimeFunc,
   WFCMenu;
 
+{$IFDEF OVERLAY}
 {$O Archive1 } {$O Archive2 } {$O Archive3 } {$O ArcView  } {$O AutoMsg  } {$O BBSList   } {$O Boot     } {$O Bulletin }
 {$O CUser    } {$O Chat     } {$O Common1  } {$O Common2  } {$O Common3  } {$O Common4   } {$O Doors    } {$O EMail    }
 {$O Events   } {$O ExecBat  } {$O File0    } {$O File1    } {$O File2    } {$O File4     } {$O File5    } {$O File6    }
@@ -83,7 +88,7 @@ USES
 {$O SysOp2L  } {$O SysOp2M  } {$O SysOp2O  } {$O SysOp3   } {$O SysOp4    } {$O SysOp5   } {$O SysOp6   } {$O SysOp7   }
 {$O SysOp7M  } {$O SysOp8   } {$O SysOp9   } {$O SysOp10  } {$O SysOp11   } {$O SysOp12  } {$O TimeBank } {$O TimeFunc }
 {$O Vote     } {$O WFCMenu  }
-
+{$ENDIF}
 CONST
   NeedToHangUp: Boolean = FALSE;
   OvrMaxSize=65536;
@@ -352,8 +357,8 @@ BEGIN
             BEGIN { Failed to load overlays to EMS }
               WriteLn;
               CASE OvrResult OF
-              { OvrError       : WriteLn('Overlay manager error');
-                OvrNotFound    : WriteLn('Overlay file not found'); }
+                OvrError       : WriteLn('Overlay manager error');
+                OvrNotFound    : WriteLn('Overlay file not found');
                 OvrNoMemory    : WriteLn('[ERROR] Not enough memory for overlay buffer');
                 OvrIOError     : WriteLn('[ERROR] Overlay file I/O error');
                 OvrNoEMSDriver : WriteLn('[ERROR] EMS driver not installed');
@@ -363,7 +368,6 @@ BEGIN
             END;
         END;
     END;
-
   Init;
 
   MaxDisplayRows := (Hi(WindMax) + 1); {25}

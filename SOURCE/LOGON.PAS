@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
  07/31/2022 - Removed inputfield from sysoppw prompt
 Added: Disabled forgotpw question for CoSysOp+

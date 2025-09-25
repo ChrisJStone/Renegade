@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
  06/13/2022 - LeeW: ln339,340,364 my bugfix attempt for batchdl error
 }

@@ -19,6 +19,7 @@
 {$ENDIF}
 
 {$A+,B-,E-,F+,I-,N-,O+,V-}
+{$X+} { Extended Syntax }
 {
 12/13/2021 Incorporated add quote help into prompt
 03/15/2022 Text in select quote menu now displays using message base quoted text color configuration
