@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S-,V-}
 {
  11/05/2021 - Nested Local_Input1 in lStatus_screen

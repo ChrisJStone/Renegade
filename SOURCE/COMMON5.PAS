@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S-,V-}
 {
  12/16/2021 Colors now use scheme colors for lightbar selected, unselected confd in file area list config

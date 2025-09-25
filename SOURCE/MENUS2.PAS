@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
 {
  11/15/2021 - Added SysOp log "Loaded Menu Name (#0)" entry

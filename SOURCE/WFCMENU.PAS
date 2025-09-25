@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
 {
 12/29/2023 - Added WriteXY proc to eliminate all repetitive GoToXY & Write commands

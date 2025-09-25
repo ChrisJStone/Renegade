@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
 {
 10/25/2021 added cosysop max waiting check

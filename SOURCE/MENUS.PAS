@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O-,R-,S+,V-}
 {
  10/21/2021 - Removed: Color change for input longer than 2

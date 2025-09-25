@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {
 Lee Woodridge
  09/23/2021 - Removed system config strings

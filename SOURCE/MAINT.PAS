@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
 {
 added a bunch of hangup checks, in an attempt to remove artifacts printed after hangup

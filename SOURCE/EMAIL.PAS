@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
 { Lee Woodridge
  10/18/2021 - Added CoSysOp max mail waiting check

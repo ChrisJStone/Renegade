@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,L+,I-,L+,N-,O+,R-,S+,V-}
 {     (                                         }
 {    )\ )                           (           }

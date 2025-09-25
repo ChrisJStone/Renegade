@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 PROGRAM Renemail;
 
 {$A+,I-,E-,F+}

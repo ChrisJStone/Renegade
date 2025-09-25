@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+  {$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S-,V-}
 {
 11/4/2021 - moved input procs to COMMON3

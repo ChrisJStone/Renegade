@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+	{$MODE TP}
+{$ENDIF}
+
 {$A+,B-,D-,E-,F+,I-,L-,N-,O+,R-,S+,V-}
 {
  - There's got to be a better way to do page numbering than "StrToInt(Copy(IntToStr(DisplayValue),1,1))+1" ...

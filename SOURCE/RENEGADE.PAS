@@ -1,3 +1,7 @@
+{$IFDEF FPC}
+  {$MODE TP}
+{$ENDIF}
+
 {$M 35500,0,131072}
 
 {     (                                         }
