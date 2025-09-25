@@ -2,7 +2,23 @@
 	{$MODE TP}
 {$ENDIF}
 
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
+{$A+,B-,E-,F+,I-,N-,O+,V-}
 { Lee Woodridge
  10/18/2021 - Added CoSysOp max mail waiting check
  03/20/2022 - added deleted user check to semail proc

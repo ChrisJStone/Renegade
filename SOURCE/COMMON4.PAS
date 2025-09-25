@@ -2,7 +2,23 @@
 	{$MODE TP}
 {$ENDIF}
 
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S-,V-}
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
+{$A+,B-,E-,F+,I-,N-,O+,V-}
 
 (*
 AH = 01h Transmit character with wait

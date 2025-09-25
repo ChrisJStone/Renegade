@@ -2,7 +2,23 @@
 	{$MODE TP}
 {$ENDIF}
 
-{$A+,B-,D+,E-,L+,I-,L+,N-,O+,R-,S+,V-}
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
+{$A+,B-,E-,I-,N-,O+,V-}
 {     (                                         }
 {    )\ )                           (           }
 {   (()/(  (         (  (  (     )  )\ )  (     }

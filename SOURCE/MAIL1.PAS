@@ -2,7 +2,23 @@
 	{$MODE TP}
 {$ENDIF}
 
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
+{$A+,B-,E-,F+,I-,N-,O+,V-}
 {
 12/13/2021 Incorporated add quote help into prompt
 03/15/2022 Text in select quote menu now displays using message base quoted text color configuration

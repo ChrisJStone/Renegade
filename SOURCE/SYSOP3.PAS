@@ -2,7 +2,23 @@
 	{$MODE TP}
 {$ENDIF}
 
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
+{$A+,B-,E-,F+,I-,N-,O+,V-}
 {
  00/00/0000 - Expanded clear field options
  00/00/0000 - If no separate log file, prompt to view normal SysOp log

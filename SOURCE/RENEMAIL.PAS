@@ -4,6 +4,22 @@
 
 PROGRAM Renemail;
 
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
 {$A+,I-,E-,F+}
 
 (* {A+,B-,D-,E-,F+,G+,N-,R-,S-,V-,I-} *)
@@ -31,7 +47,7 @@ type
   end;
 
 var
-   
+
     Lasterror :integer;
     header : fidorecord;
     dt : datetime;

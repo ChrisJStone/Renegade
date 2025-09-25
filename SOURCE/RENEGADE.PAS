@@ -16,19 +16,30 @@
 {   B U L L E T I N   B O A R D   S Y S T E M   }
 {   -----------------------------------------   }
 
+{$IFDEF DEBUG}
+  {$D+} { Debug Information }
+  {$L+} { Local Symbol Information }
+  {$Y+} { Symbol Reference Information }
+  {$S+} { Stack-Overflow Checking }
+  {$R+} { Range-Checking }
+  {$Q+} { Overflow Checking }
+{$ELSE}
+  {$D-} { Debug Information }
+  {$L-} { Local Symbol Information }
+  {$Y-} { Symbol Reference Information }
+  {$S-} { Stack-Overflow Checking }
+  {$R-} { Range-Checking }
+  {$Q-} { Overflow Checking }
+{$ENDIF}
+
 {$A+} { Align data for faster execution }
 {$B-} { Shortcut boolean evaluation }
-{$D+} { No debug info }
 {$E-} { No math-co library }
 {$F+} { Force far calls }
 {$I-} { Disable I/O check }
-{$L+} { Local symbols }
 {$N-} { No math-co use }
 {$P+} { Allow open strings }
 {$O+} { Use overlays }
-{$Q-} { No overflow check }
-{$R-} { No range check }
-{$S-} { Don't check stack usage }
 {$V-} { Variable string length allowed }
 {$X+} { Allow extended syntax }
 
