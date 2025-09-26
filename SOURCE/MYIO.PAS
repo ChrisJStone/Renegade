@@ -54,62 +54,79 @@ BEGIN
   Move(Wind[0],ScreenAddr[0],ScreenSize);
 END;
 
-PROCEDURE Update_Logo(VAR Addr1,Addr2; BlkLen: Integer);
-BEGIN
-  INLINE (
-    $1E/
-    $C5/$B6/ADDR1/
-    $C4/$BE/ADDR2/
-    $8B/$8E/BLKLEN/
-    $E3/$5B/
-    $8B/$D7/
-    $33/$C0/
-    $FC/
-    $AC/
-    $3C/$20/
-    $72/$05/
-    $AB/
-    $E2/$F8/
-    $EB/$4C/
-    $3C/$10/
-    $73/$07/
-    $80/$E4/$F0/
-    $0A/$E0/
-    $EB/$F1/
-    $3C/$18/
-    $74/$13/
-    $73/$19/
-    $2C/$10/
-    $02/$C0/
-    $02/$C0/
-    $02/$C0/
-    $02/$C0/
-    $80/$E4/$8F/
-    $0A/$E0/
-    $EB/$DA/
-    $81/$C2/$A0/$00/
-    $8B/$FA/
-    $EB/$D2/
-    $3C/$1B/
-    $72/$07/
-    $75/$CC/
-    $80/$F4/$80/
-    $EB/$C7/
-    $3C/$19/
-    $8B/$D9/
-    $AC/
-    $8A/$C8/
-    $B0/$20/
-    $74/$02/
-    $AC/
-    $4B/
-    $32/$ED/
-    $41/
-    $F3/$AB/
-    $8B/$CB/
-    $49/
-    $E0/$AA/
-    $1F);
+
+
+{
+        Free Pascal does not support Borland/Turbo Pascal inline
+ statement for direct machine code insertion. Original code appears
+ to have been a direct copy from uncrunch.pas with all comments removed.
+ Replaced inline statements with commented x86 asm and comment from
+ uncrunch.pas in tdraw463 archive.
+}
+PROCEDURE Update_Logo(VAR Addr1,Addr2; BlkLen: Integer); ASSEMBLER;
+ASM
+ PUSH    DS;                    {Save data segment.}
+ LDS     SI,[Addr1];            {Source Address}
+ LES     DI,[Addr2];            {Destination Addr}
+ MOV     CX,[BlkLen];           {Length of block}
+ JCXZ    @Done
+ MOV     DX,DI;                 {Save X coordinate for later.}
+ XOR     AX,AX;                 {Set Current attributes.}
+ CLD
+@LOOPA:
+ LODSB;                         {Get next character.}
+ CMP     AL,32;                 {If a control character, jump.}
+ JC      @ForeGround
+ STOSW;                         {Save letter on screen.}
+@Next:
+  LOOP    @LOOPA
+  JMP      @Done
+@ForeGround:
+  CMP     AL,16;                {If less than 16, then change the}
+  JNC     @BackGround;          {foreground color.  Otherwise jump.}
+  AND     AH,0F0H;              {Strip off old foreground.}
+  OR      AH,AL
+  JMP     @Next
+@BackGround:
+  CMP     AL,24;                {If less than 24, then change the}
+  JZ      @NextLine;            {background color.  If exactly 24,}
+  JNC     @FlashBitToggle;      {then jump down to next line.}
+  SUB     AL,16;                {Otherwise jump to multiple output}
+  ADD     AL,AL;                {routines.}
+  ADD     AL,AL
+  ADD     AL,AL
+  ADD     AL,AL
+  AND     AH,8FH;               {Strip off old background.}
+  OR      AH,AL
+  JMP     @Next
+@NextLine:
+  ADD     DX,160;               {If equal to 24,}
+  MOV     DI,DX;                {then jump down to}
+  JMP     @Next;                {the next line.}
+@FlashBitToggle:
+  CMP     AL,27;                {Does user want to toggle the blink}
+  JC      @MultiOutput;         {attribute?}
+  JNZ     @Next
+  XOR     AH,128;               {Done.}
+  JMP     @Next
+@MultiOutput:
+  CMP     AL,25;                {Set Z flag if multi-space output.}
+  MOV     BX,CX;                {Save main counter.}
+  LODSB;                        {Get count of number of times}
+  MOV     CL,AL;                {to display character.}
+  MOV     AL,32
+  JZ      @StartOutput;         {Jump here if displaying spaces.}
+  LODSB;                        {Otherwise get character to use.}
+  DEC     BX;                   {Adjust main counter.}
+@StartOutput:
+  XOR     CH,CH
+  INC     CX
+  REP STOSW
+  MOV     CX,BX
+  DEC     CX;                   {Adjust main counter.}
+  LOOPNZ  @LOOPA;               {Loop if anything else to do...}
+@Done:
+  POP     DS;                   {Restore data segment.}
 END;
 
 END.
