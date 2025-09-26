@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
  06/13/2022 - LeeW: ln339,340,364 my bugfix attempt for batchdl error
 }

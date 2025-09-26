@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 { Lee Woodridge
  10/18/2021 - Added CoSysOp max mail waiting check
  03/20/2022 - added deleted user check to semail proc

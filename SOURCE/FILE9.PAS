@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 
 {
  02/24/2022 - rewrote/simplified setfileareanewscandate -- REMOVED

@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
 temporarily bypassed newuserq toggles, going to implement new system
 stopped newuser application putting caller id in sysop note since it has its own place already

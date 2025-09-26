@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
  00/00/2021 - SearchUser changed username string from astr to string[36]
  11/18/2021 - Moved finduser to logon.pas only place its used, doesn't seem like it'll be useful anywhere else

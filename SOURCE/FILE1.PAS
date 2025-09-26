@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
 Lee Woodridge
  09/21/2021 - Added  DirInfo: SearchRec; to UploadFile VARS, was breaking mass uploads

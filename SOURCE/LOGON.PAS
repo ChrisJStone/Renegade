@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
  07/31/2022 - Removed inputfield from sysoppw prompt
 Added: Disabled forgotpw question for CoSysOp+

@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
 12/13/2021 Incorporated add quote help into prompt
 03/15/2022 Text in select quote menu now displays using message base quoted text color configuration

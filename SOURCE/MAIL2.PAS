@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O+,R-,S+,V-,X+}
 {
 ReadAllMessages prompt now using lRGLngStr, was commented out for some reason
 Added SysOp log for non global newscan

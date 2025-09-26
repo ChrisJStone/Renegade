@@ -1,4 +1,4 @@
-{$A+,B-,D+,E-,F+,I-,L+,N-,O-,R-,S+,V-}
+{$A+,B-,D+,E-,F+,I-,L+,N-,O-,R-,S+,V-,X+}
 {
  10/21/2021 - Removed: Color change for input longer than 2
  10/31/2021 - Added commands:
